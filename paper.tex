@@ -1,5 +1,5 @@
 \documentclass[aps,twocolumn,preprintnumbers]{revtex4}
-
+% \documentclass[aps,preprintnumbers]{scrartcl}
 
 
 \begin{document}
@@ -18,7 +18,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in ex ut mauris m
 
 \maketitle
 
-\begin{section}{Introduction to quantum computing}
+\begin{section}{Introduction}
     
 % https://www.technologyreview.com/2019/01/29/66141/what-is-quantum-computing/
 
@@ -36,6 +36,7 @@ If the state of one of those entangled qubits changes,
 the other one will instantaneously change its state as well.
 This entanglement allows quantum computers to increase it's computational power exponentially,
 rather than linearly on regular computers.
+According to MIT Technology Review, a quantum computer equipped with 300 qubits could represent more states than there are atoms in the observable universe.
 
 Qubits quantum behavious is determined to decay.
 This effect is known as the scientific term "decoherence".
@@ -53,6 +54,8 @@ according to Siobhan Roberts in MIT Technology Review,
 the most qubits used in a quantum computer, 
 % https://www.technologyreview.com/2021/11/17/1040243/quantum-computer-256-bit-startup/
 as of November 17, 2021 are 256 in a quantum computer by the Boston startup QuEra Computing. 
+There is not a single way to build a quantum computer. 
+Instead, different approaches can be followed to develop machines utilizing quantum effects for computing.
 
 Since the first proposals revolving around quantum computers back in 1980 by Yuri Manin and Richard Feynman in 1981,
 the term "quantum supremacy" is used to denote the point at which a quantum computer can complete a mathematic calculation that is beyond reach of even the most powerful supercomputer.
@@ -62,6 +65,98 @@ It is unclear how many qubits will be needed to achieve this because researchers
 
 \begin{section}{Experimental Realizations of Quantum Computers}
 
+There are different attempts of realizations of quantum computers.
+Those different approaches have different advantantages and challenges. 
+Some of those realizations, especially the ones important with regards to digital security, 
+are summarized in the following: 
+
+\begin{subsection}{Ion Traps}
+The ion trap quantum computer encodes data in energy states of ions and in vibrational modes between ions. 
+Conceptually, each ion is operated by a sepearte laser. 
+A preliminary analysis demonstrated that Fourier transforms can be evaluated with the ion trap computer. 
+This, in turn, leads to Shor's factoring algorithm, 
+which is based on Fourier transforms.
+\end{subsection}
+
+\begin{subsection}{Nuclear Magnetic Resonance}
+A Nuclear Magnetic Resonance (NMR) computer consists of a capsule filled with a liquid and an NRM machine. 
+Each molecule in the liquid is an independet quantum memory register. 
+Computation proceeds by sending radio pulses to the sample and reading its response. 
+Qubits are implemented as spin states of the nuclei of atoms comprising the molecules. 
+In contrast to the Ion Trap computer, 
+a measurement is performed on a statistical ensemble of molecules instead of a single isolated quantum system which was used as memory register. 
+NMR computers have been achieving the most accomplishements in quantum computing so far, 
+as they can solve non-polynomial complete problems in a polynomial time.
+\end{subsection}
+
+\begin{subsection}{Josephson Junctions}
+A Josepson junction quantum computer is a Cooper pair box,
+which is a small superconducting island electrode weakly coupled to a bulk superconductor. 
+Weak coupling between the superconductors create a Josephson junction between them which behaves as a capactor. 
+If the Cooper box is as small as a quantum dot, 
+the charging current breaks into discrete transfer of individual Cooper pairs. 
+Ultimately, it is possible to just transfer a single Cooper pair across a junction. 
+Qubits in Josephson junction quantum computers are controlled electrically which results in them being interesting for future developments.
+\end{subsection}
+
 \end{section}
 
+% Maybe change this into something like: Evaluation of Post-Quantum Security Mechanisms
+\begin{section}{Quantum computing algorithms and their effects on current security mechanisms}
+As discussed earlier, quantum computers could eventually reach the state of quantum superiority, 
+in which the quantum computer can perform tasks no regular computer could ever compute.
+This implies that the quantum computer could also solve problems which a regular computer could not solve so far.
+Which problems can be solved and which security mechanisms are affected will be discussed in this following section. 
+
+% Look into paper for this. The paper has a perfect level for our own research.
+\begin{subsection}{Shor's algorithm}
+% Think about talking about quantum gates
+Shor's algorithm is a polynomial-time quantum computer algorithm for integer factorization.
+Essentially it solves the following problem: 
+Given an integer $N$m find its prime factors. 
+On a quantum computer, to factor an integer $N$, 
+Shor's algorithm runs in polynomial time. 
+Using quantum gates demonstrates, 
+that integer-factorization can be solved on a quantum computer an is consequently in the complexity class BQP, 
+which is defined as the class of decision problems solvable by a quantum computer in polynomial time with an error probability of at most $1/3$ for all instances. 
+This algorithm is almost exponentially faster than the most efficient known classical factoring algorithm, the general number field sieve which is the most efficient known factoring algorithm on regular computers. 
+The efficiency of Shor's algorithm is due to the efficiency of the quantum Fourier transform and modular exponentiation by repeated squearings. 
+If a quantum computer with a sufficient number of qubits could operate without succumbing to quantum noise and other quantum-decoherence phenomena, 
+Shor's algorithm could be used to break public-key cryptography schemes, 
+such as the RSA scheme or the Diffie-Hellman key exchange. 
+
+% Maybe refer to the first nmr attempt of 2001. Access to the paper is given.
+So far, the largest number factorized using Shor's algorithm, 
+as of 2019 is the number 21 factored back in 2012. 
+The integer 35 was attempted in 2019 on an IBM Q System One, 
+but the algorithm failed. 
+
+% Eventually add math for Shor's algorithm
+\end{subsection}
+
+% Consider paper for this section as well
+\begin{subsection}{Grover's algorithm}
+% Think about writing either 128 bit or 128-bit in the whole paper
+Grover's algorithm, devised by Lov Grover in 1996,
+refers to a quantum algorithm for performing unstructered search. 
+The analogous problem in classical computing cannot be solved in fewer than $O(N)$ evaluations. 
+Grover's algorithm is achieving the same goal in $O(\sqrt{N})$. 
+In contrast to Shor's algorithm providing exponential speedup, 
+Grover's algorithm only provides quadratic speedup. 
+Considering Grover's algorithm could be used to brute-force a 128-biy symmetric key in roughly $2^{64}$ iterations, 
+or a 256-bit key in roughly $2^{128}$ iterations.
+\end{subsection}
+
+\end{section}
+
+\begin{section}{Post Quantum Cryptography}
+Additionally, it will be discussed what defines a quantum-proof algorithm. 
+Increasing the key size from e.g. 128 bits to 256 bits squares the number of possible permutations a quantum computer has to search using Grover's algorithm.
+The goal is the same as it was before quantum computers ermerged.
+The operations to crack the security mechanisms have to become infeasable to perform. 
+
+Another approach would be to develop new algorithms using more complex trapdoor functions even quantum computers could not possibly crack in a feasible amount of time. 
+Researchers are working in areas like lattice-based cryptography and supersingular isogeny key exchange.
+\end{section}
+% Conclusion: I see it as an improvement, not as dangerous
 \end{document}

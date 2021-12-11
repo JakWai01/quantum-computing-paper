@@ -66,3 +66,6 @@ When will quantum computing arrive
 - Write how quantum computers work in the first place
 - Continue with the types of quantum computers
 - Look at security mechanism and how quantum computing can affect them
+- Consider talking about quantum arithmetic and what possibilities it opens up for digital security
+- Shors algorithm
+- Lov Grover Algorithm
