@@ -1,15 +1,67 @@
-\documentclass{scrarticle}
+\documentclass[aps,twocolumn,preprintnumbers]{revtex4}
 
 
 
 \begin{document}
 
-\title{Quantum Computing}
+\title{Quantum Computing and its Implications on Digital Security}
+
 \author{Jakob Waibel}
-\date{}
+
+\affiliation{\it Stuttgart Media University, 70569 Stuttgart}
+
+\date{\today}
+
+\begin{abstract}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in ex ut mauris mollis dictum. Aenean tempor scelerisque lectus, eu varius ex ullamcorper ac. Nulla quis mattis tellus. Vivamus imperdiet ante sit amet tellus dapibus imperdiet. Quisque iaculis consequat cursus. Morbi in tempor neque, eu aliquet est. Pellentesque dapibus nulla id sem scelerisque eleifend. Ut tincidunt ex nec erat pharetra pretium. Vivamus bibendum quam id nunc fermentum tincidunt. Duis congue semper nulla sed porttitor. Morbi feugiat suscipit pellentesque. Nullam eget velit vel ligula suscipit convallis.
+\end{abstract}
 
 \maketitle
 
-\tableofcontents
+\begin{section}{Introduction to quantum computing}
+    
+% https://www.technologyreview.com/2019/01/29/66141/what-is-quantum-computing/
+
+Quantum computers utilize qubits to represent information. 
+Instead of working with a stream of electiral or optical signals representing 1s and 0s, 
+quantum computers utilize qubits, which can represent various combinations of 1s and 0s at the same time. 
+This effect is called superposition. To put qubits into superposition, 
+researchers manipulate qubits in different ways. Like in quantum mechanics, 
+a measurement determines the state. Once qubits are measured, 
+it's quantum state immediately collapses to either 1 or 0.
+
+Entanglement causes pairs of qubits to entangle.
+This results in those qubits having a similar quantum state at all times.
+If the state of one of those entangled qubits changes,
+the other one will instantaneously change its state as well.
+This entanglement allows quantum computers to increase it's computational power exponentially,
+rather than linearly on regular computers.
+
+Qubits quantum behavious is determined to decay.
+This effect is known as the scientific term "decoherence".
+It describes the quantum state being extremely fragile.
+The slightest disturbance can cause a qubit to loose its state of superposition.
+These disturbances can be created by vibrations or change of temperatures.
+Disturbances are also refered to as "noise" in quantum computer terminology.
+This is the reason why qubits and quantum computers are held in extremly protected environments, 
+often fridges or vacuum chambers.
+To compensate for this noise, 
+thousands of standard qubits will be needed to create a reliable qubit, 
+refered to as a "logical" qubit. 
+To set this into context, 
+according to Siobhan Roberts in MIT Technology Review, 
+the most qubits used in a quantum computer, 
+% https://www.technologyreview.com/2021/11/17/1040243/quantum-computer-256-bit-startup/
+as of November 17, 2021 are 256 in a quantum computer by the Boston startup QuEra Computing. 
+
+Since the first proposals revolving around quantum computers back in 1980 by Yuri Manin and Richard Feynman in 1981,
+the term "quantum supremacy" is used to denote the point at which a quantum computer can complete a mathematic calculation that is beyond reach of even the most powerful supercomputer.
+It is unclear how many qubits will be needed to achieve this because researchers keep finding new algorihtms to boost the performance of classical computers and supercomputing hardware is getting better as well.
+
+\end{section}
+
+\begin{section}{Experimental Realizations of Quantum Computers}
+
+\end{section}
 
 \end{document}
