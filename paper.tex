@@ -1,12 +1,10 @@
 \documentclass[aps,preprintnumbers,twocolumn]{revtex4}
-% \documentclass[aps,preprintnumbers, twocolumn]{scrartcl}
+% \documentclass[aps,preprintnumbers]{scrartcl}
 \usepackage{natbib}
 \usepackage{url}
 
-
+% Add page numbers to papers
 % Where I make references, put actual hyperlinks
-
-
 
 \begin{document}
 \title{Quantum Computing and its Implications on Digital Security}
@@ -29,7 +27,7 @@ Since Paul Benioffs and Richard Feynman's talks on quantum computing held at the
 quantum computing has become a large research area. 
 Even so large, that is has become more and more difficult to understand the basics of it and its implications on the future of computing. 
 This work will introduce the reader to the basics of quantum computing from a computer scientists perspective. 
-Hence, the implications on digital security, especially cryptography will play the major role in the following paper. 
+Hence this paper focuses on the computer scientists perspective, it is important to look at the implications on digital security, especially cryptography.
 
 \end{section}
 
@@ -38,39 +36,47 @@ Quantum computers utilize qubits to represent information.
 Instead of working with a stream of electiral or optical signals representing 1s and 0s, 
 quantum computers utilize qubits, which can represent various combinations of 1s and 0s at the same time. 
 This effect is called superposition. To put qubits into superposition, 
-researchers manipulate qubits in different ways. As quantum computing is based on quantum mechanics and has to obey to the same laws, 
-a measurement determines the state. Once qubits are measured, 
-it's quantum state immediately collapses to either 1 or 0.
+researchers manipulate qubits in different ways. As quantum computing is based on quantum mechanics and hence has to obey to the same laws, 
+a measurement determines the state of a qubit. Once qubits are measured, 
+it's quantum state immediately collapses to either 1 or 0 and its state of superposition is lost.
 
-Entanglement causes pairs of qubits to entangle.
+Quantum entanglement is a phenomenon which causes particles to link so that their state cannot be described independently anymore.
 This results in those entangled qubits having a similar quantum state at all times.
 If the state of one of those entangled qubits changes,
-the other one will instantaneously change its state as well. This improved the processing speed of quantum computers. As Alamira Jouman Hajjar puts it in her Article on AIMultiple \cite{AIMultiple}, one qubit will reveal information about all the qubits said qubit is entangled with.
-This entanglement allows quantum computers to increase it's computational power exponentially,
+the other one will instantaneously change its state as well. This improves the processing speed of quantum computers. As Alamira Jouman Hajjar puts it in her Article on AIMultiple \cite{AIMultiple}, one qubit will reveal information about all the qubits said qubit is entangled with.
+This entanglement allows quantum computers to increase its computational power exponentially,
 rather than linearly on regular computers.
 According to an article of IEEE Spectrum \cite{IEEE}, a quantum computer equipped with 300 qubits could represent more states than there are atoms in the observable universe.
 
-Qubits quantum behavious is determined to decay.
+The quantum behaviour of qubits is determined to decay.
 This effect is known as the scientific term "decoherence".
 It describes the quantum state as being extremely fragile.
-The slightest disturbance can cause a qubit to loose its state of superposition.
-These disturbances can be created by vibrations, change of temperatures or related external influeces.
+The slightest disturbance can cause a qubit to collapse and hence loose its state of superposition.
+These disturbances can be caused by vibrations, change of temperatures or related external influeces.
 Disturbances are also refered to as "noise" in quantum computer terminology.
-This is the reason why qubits and quantum computers are held in extremly protected environments, 
+Decoherence is the reason why qubits quantum computers are held in extremly protected environments, 
 often fridges or vacuum chambers.
 To compensate for this noise, 
 thousands of standard qubits will be needed to create a reliable qubit, 
 refered to as a "logical" qubit. 
-To set this into context, 
+A logical qubit has a long enough coherence time to be used for quantum logic gates. 
+Essentially, logical qubits are a group of regular qubits refered to as a singular qubit in computation, 
+which have more stable characteristics than regular qubits.
+
+To get a sense of how far development of quantum computers has come, 
 according to Siobhan Roberts in MIT Technology Review \cite{MIT}, 
 the most qubits used in a quantum computer, 
-as of November 17, 2021 are 256 in a quantum computer by the Boston startup QuEra Computing. 
-There is not a single way to build a quantum computer. 
-Instead, different approaches can be followed to develop machines utilizing quantum effects for computing.
+as of November 17, 2021 are 256 regular qubits in a quantum computer by the Boston startup QuEra Computing. 
 
-Since the first proposals revolving around quantum computers back in 1980 by Yuri Manin and Richard Feynman in 1981,
-the term "quantum supremacy" is used to denote the point at which a quantum computer can complete a mathematic calculation that is beyond reach of even the most powerful supercomputer.
-It is unclear how many qubits will be needed to achieve this because researchers keep finding new algorihtms to boost the performance of classical computers and supercomputing hardware is getting better as well.
+Since the first proposals revolving around quantum computers by Yuri Manin in 1980 and Richard Feynman in 1981,
+the term "quantum supremacy" is used to denote the point at which a quantum computer can complete a mathematic calculation that is beyond reach of even the most powerful supercomputers.
+It is unclear how many qubits will be needed to achieve superposition. 
+This results out of the fact that research results in new algorihtms and hardware improvements to boost the performance of classical (super)computers. 
+
+Potential applications for quantum computer exceed cryptography. Some potential applications include the simulation of quantum systems, machine learning, computational biology and generative chemistry. 
+
+There is not a single way to build a quantum computer. 
+Instead, different approaches can be followed to develop machines utilizing quantum effects for computing. Some of which will be discussed in the following section.
 
 \end{section}
 
@@ -159,7 +165,6 @@ As of 2021, there are some challenges in quantum computing researchers are worki
     as well as stray electromagnetic couplings. 
     Classical computers are susceptible to bit-flips. Qubits suffer form said bit-flips as well as phase errors. 
     Direct inspection for errors should be avoided as it will cause the value to collapse, leaving it superposition state.
-    % Citation below
     \item The difficulty of coherence is another challenge. 
     Qubits can retain their quantum state only for a short period of time. 
     According to Mavroeidis \cite{DBLP:journals/corr/abs-1804-00200} The longest time qubits remained in superposition so far was set by Australian researchers at the University of New South Wales. 
@@ -170,7 +175,6 @@ As of 2021, there are some challenges in quantum computing researchers are worki
 
 \end{section}
 
-% Add maths of Shor and Grover
 \begin{section}{Quantum computing algorithms and their effects on current security mechanisms}
 As discussed earlier, quantum computers could eventually reach the state of quantum superiority, 
 in which the quantum computer can perform tasks no regular computer could ever compute.
@@ -179,7 +183,6 @@ Which problems can be solved and which security mechanisms are affected will be 
 
 % Look into paper for this. The paper has a perfect level for our own research.
 \begin{subsection}{Shor's algorithm}
-% Think about talking about quantum gates
 Shor's algorithm is a polynomial-time quantum computer algorithm for integer factorization.
 Essentially it solves the following problem: 
 Given an integer $N$m find its prime factors. 
@@ -191,12 +194,10 @@ which is defined as the class of decision problems solvable by a quantum compute
 This algorithm is almost exponentially faster than the most efficient known classical factoring algorithm, the general number field sieve which is the most efficient known factoring algorithm on regular computers. 
 The efficiency of Shor's algorithm is due to the efficiency of the quantum Fourier transform and modular exponentiation by repeated squearings. 
 If a quantum computer with a sufficient number of qubits could operate without succumbing to quantum noise and other quantum-decoherence phenomena, 
-% Cite Kirsch here
 Shor's algorithm could be used to break public-key cryptography schemes, 
 such as the RSA scheme or the Diffie-Hellman key exchange. That these algorithms could be vulnerable was already stated by Kirsch in 2015
 \cite{Kirsch2015QuantumCT}.
 
-% Maybe refer to the first nmr attempt of 2001. Access to the paper is given.
 So far, the largest number factorized using Shor's algorithm, 
 as of 2019 is the number 21 factored back in 2012 by Martín-López et al \cite{article}. 
 The integer 35 was attempted in 2019 on an IBM Q System One, 
@@ -218,16 +219,15 @@ Considering Grover's algorithm could be used to brute-force a 128-biy symmetric 
 or a 256-bit key in roughly $2^{128}$ iterations.
 
 Grover's algorithm can be utilized to find a collision in a hash function in $O(sqrt{N})$ as searching for a collision is comparable to performing an unsorted search.
-% TODO: Cite brassard
-Additionally, it has been proved that it is possible to combine Grover's algorithm with the birthday paradox, 
-also known as a quantum birthday attack. 
+Brassard proved \cite{1998} that it is possible to combine Grover's algorithm with the birthday paradox, 
+also known as a quantum birthday attack, which makes Grover's algorithm even more efficient. 
 As a result, many of the present hash alogithms are disqualified for use in the quantum era. 
 However, as of 2021, both SHA-2 and SHA-3 with longer outputs remain quantum resistant.
 \end{subsection}
 
 \end{section}
 
-% Research for this paragraph in a second paper
+% Research for this paragraph and add some more post quantum crypto examples
 \begin{section}{Post Quantum Cryptography}
 Additionally, it will be discussed what defines a quantum-proof algorithm. 
 Post Quantum Cryptography descrbes algorithms that are secure against quantum computing and against conventional computers.
@@ -246,7 +246,6 @@ Here, we are given as input a lattice represented by an aribtrary basis and our 
 \end{subsection}
 
 \end{section}
-% Conclusion: I see it as an improvement, not as dangerous
 
 \begin{section}{Conclusion}
 As described before, Shor's algorithm, 
@@ -267,6 +266,7 @@ It has to be said that quantum computers,
 as what could be seen in the current records revolving around quantum computing, 
 are not powerful enough to form a thread to security mechanisms by now, 
 since way more qubits are needed to perform operations on large enough numbers and preserve the state of superposition long enough. 
+To conclude, it should be said that quantum computing should be seen as an opportunity for overdue improvement, not as a thread to digital security. 
 \end{section}
 
 \bibliographystyle{plain}
