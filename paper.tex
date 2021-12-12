@@ -68,7 +68,7 @@ It is unclear how many qubits will be needed to achieve this because researchers
 There are different attempts of realizations of quantum computers.
 Those different approaches have different advantantages and challenges. 
 Some of those realizations, especially the ones important with regards to digital security, 
-are summarized in the following: 
+are summarized in the following:
 
 \begin{subsection}{Ion Traps}
 The ion trap quantum computer encodes data in energy states of ions and in vibrational modes between ions. 
@@ -76,6 +76,17 @@ Conceptually, each ion is operated by a sepearte laser.
 A preliminary analysis demonstrated that Fourier transforms can be evaluated with the ion trap computer. 
 This, in turn, leads to Shor's factoring algorithm, 
 which is based on Fourier transforms.
+
+Also refered to as "trapped ion quantum computer". 
+The fundamental operations of a quantum computer have been demonstrated experimentally with the currently highest accuracy in trapped ion systems. 
+Trapped ion computers are researched because they could be used for a large-scale quantum computer.
+Scaling the ion trap to a large number of qubits could be accomplished by combining multiple ion traps into an array and transporting ions between them. 
+As of 2018, the largest number of particles to be controllable entangled is 20 trapped ions. 
+In 2021, researchers from the University of Innsbruck presented a quantum computing demonstrator that fits inside two 19-inch server racks, 
+the world's first qualirt standards meeting compact trapped ion quantum computer. 
+
+Challenges for ion traps include initialization of the ion's motional states, 
+the relatively brief lifetimes of the photon states and the decoherence which is is caused when the qubits interact with the external environment undesirably.
 \end{subsection}
 
 \begin{subsection}{Nuclear Magnetic Resonance}
@@ -87,6 +98,22 @@ In contrast to the Ion Trap computer,
 a measurement is performed on a statistical ensemble of molecules instead of a single isolated quantum system which was used as memory register. 
 NMR computers have been achieving the most accomplishements in quantum computing so far, 
 as they can solve non-polynomial complete problems in a polynomial time.
+
+Initially the approach was to use the soin properties of atoms of particular molecules in a liquid sample as qubits - 
+this is known as liquid state NMR (LSNMR). 
+This approach has since been superseeded by solid state NRM (SSNMR) as a means of quantum computation.
+
+Solid state NMR (SSSNMR) differs from LSNMR in that we have a solid state sample, 
+for example a nitrogen vacancy diamond lattice rather than a liquid sample. 
+This has many advantages such as lack of molecular diffusion coherence, 
+lower temperatures can be achieved to the point of suppressing phonon decoherence and a greater variety of control operations that allow us to overcome one of the major problems of LSNMR that is initialisation. 
+Moreover, as in a crystal structure we can localize precisely the qubits, 
+we can measure each qubit individually, 
+instead of having an ensemble measurement as in LSNMR. 
+
+More recent work shows that all experiments in liquid state bulk ensemble NMR quantum computing to date do not possess quantum entanglement, 
+thought to be required for quantum computation. 
+Hence NMR quantum computing experiments are likely to have been only classical simulations of a quantum computer. 
 \end{subsection}
 
 \begin{subsection}{Josephson Junctions}
@@ -97,6 +124,15 @@ If the Cooper box is as small as a quantum dot,
 the charging current breaks into discrete transfer of individual Cooper pairs. 
 Ultimately, it is possible to just transfer a single Cooper pair across a junction. 
 Qubits in Josephson junction quantum computers are controlled electrically which results in them being interesting for future developments.
+
+In Physics, the Josephson effect is a phenomenon that occurs when two superconductors are placed in proximity, 
+with some barrier or restriction between them. 
+The Josephon effect produces a current, known as supercurrent, that flows continuosly without any voltage applied. 
+This current thorught the junction occurs by quantum tunneling. 
+This is used to create a non-linear inductance which is essential for qubit design, 
+as it allows a design of anharmonic oscialltors. 
+A quantum harmonic oscillator cannot be used as a qubit, 
+as there is no way to address only two of its states. 
 \end{subsection}
 
 \end{section}
