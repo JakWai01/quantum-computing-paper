@@ -135,8 +135,30 @@ A quantum harmonic oscillator cannot be used as a qubit,
 as there is no way to address only two of its states. 
 \end{subsection}
 
+\begin{section}{Challenges in Quantum Computing}
+As of 2021, there are some challenges in quantum computing researchers are working on: 
+
+\begin{itemize}
+    \item Quantum algorithms are mainly probabilistic. 
+    This means that in one opeartion a quantum computer returns many solutions where only one is correct. 
+    This trial and error for measuring and verifying the correct answer weakens the advantage of quantum computing speed. 
+    \item Qubits are susceptible to errors earlier introduced as noise. 
+    They can be affected by heat, noise in the environment, 
+    as well as stray electromagnetic couplings. 
+    Classical computers are susceptible to bit-flips. Qubits suffer form said bit-flips as well as phase errors. 
+    Direct inspection for errors should be avoided as it will cause the value to collapse, leaving it superposition state.
+    % Citation below
+    \item The difficulty of coherence is another challenge. 
+    Qubits can retain their quantum state only for a short period of time. 
+    The longest time qubits remained so far was set by Australian researchers at the University of New South Wales. 
+    Their qubits remained in superposition for a total of 35 seconds.
+\end{itemize}
+
 \end{section}
 
+\end{section}
+
+% Add maths of Shor and Grover
 % Maybe change this into something like: Evaluation of Post-Quantum Security Mechanisms
 \begin{section}{Quantum computing algorithms and their effects on current security mechanisms}
 As discussed earlier, quantum computers could eventually reach the state of quantum superiority, 
@@ -158,8 +180,9 @@ which is defined as the class of decision problems solvable by a quantum compute
 This algorithm is almost exponentially faster than the most efficient known classical factoring algorithm, the general number field sieve which is the most efficient known factoring algorithm on regular computers. 
 The efficiency of Shor's algorithm is due to the efficiency of the quantum Fourier transform and modular exponentiation by repeated squearings. 
 If a quantum computer with a sufficient number of qubits could operate without succumbing to quantum noise and other quantum-decoherence phenomena, 
+% Cite Kirsch here
 Shor's algorithm could be used to break public-key cryptography schemes, 
-such as the RSA scheme or the Diffie-Hellman key exchange. 
+such as the RSA scheme or the Diffie-Hellman key exchange.
 
 % Maybe refer to the first nmr attempt of 2001. Access to the paper is given.
 So far, the largest number factorized using Shor's algorithm, 
@@ -181,18 +204,57 @@ In contrast to Shor's algorithm providing exponential speedup,
 Grover's algorithm only provides quadratic speedup. 
 Considering Grover's algorithm could be used to brute-force a 128-biy symmetric key in roughly $2^{64}$ iterations, 
 or a 256-bit key in roughly $2^{128}$ iterations.
+
+Grover's algorithm can be utilized to find a collision in a hash function in $O(sqrt{N})$ as searching for a collision is comparable to performing an unsorted search.
+% TODO: Cite brassard
+Additionally, it has been proved that it is possible to combine Grover's algorithm with the birthday paradox, 
+also known as a quantum birthday attack. 
+As a result, many of the present hash alogithms are disqualified for use in the quantum era. 
+However, as of 2021, both SHA-2 and SHA-3 with longer outputs remain quantum resistant.
 \end{subsection}
 
 \end{section}
 
+% Research for this paragraph in a second paper
 \begin{section}{Post Quantum Cryptography}
 Additionally, it will be discussed what defines a quantum-proof algorithm. 
+Post Quantum Cryptography descrbes algorithms that are secure against quantum computing and against conventional computers.
 Increasing the key size from e.g. 128 bits to 256 bits squares the number of possible permutations a quantum computer has to search using Grover's algorithm.
 The goal is the same as it was before quantum computers ermerged.
 The operations to crack the security mechanisms have to become infeasable to perform. 
 
 Another approach would be to develop new algorithms using more complex trapdoor functions even quantum computers could not possibly crack in a feasible amount of time. 
-Researchers are working in areas like lattice-based cryptography and supersingular isogeny key exchange.
+Researchers are working in areas like lattice-based cryptography and supersingular isogeny key exchange. 
+
+\begin{subsection}{Lattice-based Cryptography}
+This is a form of public-key cryptography that avoids the weaknesses of RSA. 
+Rather than multiplying primes, lattice-based encryption schemes involve multiplying matrices. 
+Furthermore, lattice-based cryptographic mechanisms are based on the presumed hardness of lattice problems. 
+Here, we are given as input a lattice represented by an aribtrary basis and our goal is to output the shortest non-zero vector in it.
+\end{subsection}
+
 \end{section}
 % Conclusion: I see it as an improvement, not as dangerous
+
+\begin{section}{Conclusion}
+As described before, Shor's algorithm, 
+as well as Grover's algorithm will presumably force computer scientists to improve current stadards to provide information security across areas. 
+To accomplish information security, 
+current security mechanisms such as hashing algorithms have to be improved and as a result be quantum-safe by increasing their key-length.
+The second approach mentioned in this paper is developing new, 
+quantum-secure algorithms, 
+like lattice-based cryptography. 
+Even the huge speedups quantum-computers provide don't make it feasible to crack these algorithms. 
+It is not known yet, which type of quantum computer will prevail. 
+Ion traps, Nuclear Magnetic Resonance and Josepshon Junctions are some of the most promising approaches. 
+In current systems like the IBM Q System One, 
+Josephson junctions are used in their superconducting quantum computer. 
+If this approach will prevail is unclear, 
+since quantum entanglement in this type of processor is, as of 2021, not possible yet. 
+It has to be said that quantum computers, 
+as what could be seen in the current records revolving around quantum computing, 
+are not powerful enough to form a thread to security mechanisms by now, 
+since way more qubits are needed to perform operations on large enough numbers and preserve the state of superposition long enough. 
+\end{section}
+
 \end{document}
