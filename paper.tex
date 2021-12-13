@@ -205,30 +205,26 @@ The integer 35 was attempted in 2019 on an IBM Q System One,
 but the algorithm failed. 
 \end{subsection}
 
-% Consider paper for this section as well
 \begin{subsection}{Grover's algorithm}
-% Think about writing either 128 bit or 128-bit in the whole paper
 Grover's algorithm, devised by Lov Grover in 1996,
 refers to a quantum algorithm for performing unstructered search. 
-The analogous problem in classical computing cannot be solved in fewer than $O(N)$ evaluations. 
+The analogous problem in classical computing has $O(N)$ complexity. 
 Grover's algorithm is achieving the same goal in $O(\sqrt{N})$. 
 In contrast to Shor's algorithm providing exponential speedup, 
 Grover's algorithm only provides quadratic speedup. 
-Considering Grover's algorithm could be used to brute-force a 128-biy symmetric key in roughly $2^{64}$ iterations, 
-or a 256-bit key in roughly $2^{128}$ iterations.
 
-Grover's algorithm can be utilized to find a collision in a hash function in $O(sqrt{N})$ as searching for a collision is comparable to performing an unsorted search.
+As \cite{DBLP:journals/corr/abs-1804-00200} state in their paper, Grover's algorithm can be utilized to find a collision in a hash function in $O(\sqrt{N})$ as searching for a collision is comparable to performing an unsorted search. 
+Additionally, Grover's algorithm can be used to improve a lot of brute-force attacks targeting symmetric cryptography.
 Brassard proved \cite{1998} that it is possible to combine Grover's algorithm with the birthday paradox, 
-also known as a quantum birthday attack, which makes Grover's algorithm even more efficient. 
-As a result, many of the present hash alogithms are disqualified for use in the quantum era. 
-However, as of 2021, both SHA-2 and SHA-3 with longer outputs remain quantum resistant.
+also known as a quantum birthday attack, which leads to finding collisions with a complexity of $O(N^{\frac{1}{3}})$.
+As a result, many of current , rather weak, hashing alogithms are disqualified for use in the quantum era. 
+However, as of 2021, both SHA-2 and SHA-3 with longer outputs remain quantum resistant as even Grover's algorithm does not make it feasible to to find a collision when the keys are too long.
 \end{subsection}
 
 \end{section}
 
 % Research for this paragraph and add some more post quantum crypto examples
 \begin{section}{Post Quantum Cryptography}
-Additionally, it will be discussed what defines a quantum-proof algorithm. 
 Post Quantum Cryptography descrbes algorithms that are secure against quantum computing and against conventional computers.
 Increasing the key size from e.g. 128 bits to 256 bits squares the number of possible permutations a quantum computer has to search using Grover's algorithm.
 The goal is the same as it was before quantum computers ermerged.
