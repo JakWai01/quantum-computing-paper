@@ -130,7 +130,7 @@ According to Gershenfeld \cite{Gershenfeld1998QuantumCW}, the first successful c
 which will be covered in the respective chapter. 
 \end{subsection}
 
-\begin{subsection}{Josephson Junction}
+\begin{subsection}{Josephson Junctions}
 As Martinis and Osborne explain in their paper, 
 the Josephson effect is a phenomenon that occurs when two superconductors are seperated 
 by some barrier or restriction between them, which is thin enough that electrons can tunnel through the barrier using quantum-mechanics. 
@@ -146,19 +146,19 @@ Qubits in Josephson junction quantum computers are controlled electrically which
 \end{subsection}
 
 \begin{section}{Challenges in Quantum Computing}
-As of 2021, there are some challenges in quantum computing researchers are working on: 
+As of 2021, there are some challenges researcher in the current state of quantum computing which can be derived from the earlier chapters: 
 
 \begin{itemize}
-    \item Quantum algorithms are mainly probabilistic. 
-    This means that in one opeartion a quantum computer returns many solutions where only one is correct. 
-    This trial and error for measuring and verifying the correct answer weakens the advantage of quantum computing speed. 
-    \item Qubits are susceptible to errors earlier introduced as noise. 
-    They can be affected by heat, noise in the environment, 
-    as well as stray electromagnetic couplings. 
-    Classical computers are susceptible to bit-flips. Qubits suffer form said bit-flips as well as phase errors. 
-    Direct inspection for errors should be avoided as it will cause the value to collapse, leaving it superposition state.
-    \item The difficulty of coherence is another challenge. 
-    Qubits can retain their quantum state only for a short period of time. 
+    \item Often, as e.g. in the Josephson junction quantum computer, extremely low temperatures are needed. These have to be achieved at reasonable cost. Using e.g. laser cooling is a one approach in quantum computing. The concept of laser cooling was proposed by Steven Chu, Claude-Cohen-Tannoudji and William D. Phillips who got awarded the Nobel prize for their research in the develoment of methods to cool and trap atoms with laser light.
+    \item Quantum algorithms have probabilistic characteritics. 
+    This implies that in a single operation a quantum computer returns multiple solutions, each of those solutions with an assigned probability, where only one can be correct. 
+    Figuring out the correct answer reduces the potential speed of quantum computers.
+    \item Qubits are prone to errors earlier introduced as noise. 
+    Noise can be caused e.g. by heat or noise in the environment. 
+    As in classical computing, this noise can lead to bit-flips. There are approached in "quantum error correction" to deal with these errors. 
+    One of those approaches is to use the "bit flip code" in which a total of 3 qubits are needed to result in 1 correct bit using quantum entanglement.  
+    \item Increasing the number of qubits in a processor. The more qubits in a processor, the more logical qubits can be used. More qubits also lead to less errors since methods for error correction can be used more effectively.
+    \item Decoherence leads to qubits retaining their quantum state only for a short period of time. 
     According to Mavroeidis \cite{DBLP:journals/corr/abs-1804-00200} The longest time qubits remained in superposition so far was set by Australian researchers at the University of New South Wales. 
     Their qubits remained in superposition for a total of 35 seconds.
 \end{itemize}
@@ -171,7 +171,7 @@ As of 2021, there are some challenges in quantum computing researchers are worki
 As discussed earlier, quantum computers could eventually reach the state of quantum superiority, 
 in which the quantum computer can perform tasks no regular computer could ever compute.
 This implies that the quantum computer could also solve problems which a regular computer could not solve so far.
-Which problems can be solved and which security mechanisms are affected will be discussed in this following section. 
+Some of the problems that can be solved and which security mechanisms are affected will be discussed in this following section. 
 
 % Look into paper for this. The paper has a perfect level for our own research.
 \begin{subsection}{Shor's algorithm}
