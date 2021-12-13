@@ -13,7 +13,7 @@
 \date{\today}
 
 \begin{abstract}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in ex ut mauris mollis dictum. Aenean tempor scelerisque lectus, eu varius ex ullamcorper ac. Nulla quis mattis tellus. Vivamus imperdiet ante sit amet tellus dapibus imperdiet. Quisque iaculis consequat cursus. Morbi in tempor neque, eu aliquet est. Pellentesque dapibus nulla id sem scelerisque eleifend. Ut tincidunt ex nec erat pharetra pretium. Vivamus bibendum quam id nunc fermentum tincidunt. Duis congue semper nulla sed porttitor. Morbi feugiat suscipit pellentesque. Nullam eget velit vel ligula suscipit convallis.
+Quantum computing has been gaining more and more relevance in the last couple of years and is often rather seen as a thread than a blessing by society. This paper aims to inform readers about the topic on a high-level to join the discussion about the future relevance of quantum computing. First, this paper will explain the basics of quantum computing and dive into types of quantum computers including ion traps, nuclear magnetic resonance quantum computers and quantum computers based on josephson junctions. Afterwards, the effects of quantum computing algorithms, especially Shor's and Grover's algorithm on current security mechanisms are discussed, rounding off by explaining approaches on how to achieve post quantum security.
 \end{abstract}
 
 \maketitle
@@ -225,28 +225,33 @@ However, as of 2021, both SHA-2 and SHA-3 with longer outputs remain quantum res
 
 % Research for this paragraph and add some more post quantum crypto examples
 \begin{section}{Post Quantum Cryptography}
-Post Quantum Cryptography descrbes algorithms that are secure against quantum computing and against conventional computers.
-Increasing the key size from e.g. 128 bits to 256 bits squares the number of possible permutations a quantum computer has to search using Grover's algorithm.
-The goal is the same as it was before quantum computers ermerged.
-The operations to crack the security mechanisms have to become infeasable to perform. 
+Post Quantum Cryptography describes algorithms that are secure against quantum computing and conventional computers. To make sure that an algorithm is quantum secure, there are generally two approaches: 
 
-Another approach would be to develop new algorithms using more complex trapdoor functions even quantum computers could not possibly crack in a feasible amount of time. 
-Researchers are working in areas like lattice-based cryptography and supersingular isogeny key exchange. 
-
-\begin{subsection}{Lattice-based Cryptography}
-This is a form of public-key cryptography that avoids the weaknesses of RSA. 
-Rather than multiplying primes, lattice-based encryption schemes involve multiplying matrices. 
-Furthermore, lattice-based cryptographic mechanisms are based on the presumed hardness of lattice problems. 
-Here, we are given as input a lattice represented by an aribtrary basis and our goal is to output the shortest non-zero vector in it.
+\begin{subsection}{Improve Current Security Mechanisms}
+Improving current security mechanisms by increasing the key length from 128 bits to 256 bits squares the number of possible permutations a quantum computer has to search unsing Grover's algorithm. 
+The speedup Grover's algorithm provdides is not that efficient as that it could crack this key in a feasible amount of time.
 \end{subsection}
+
+\begin{subsection}{Developing Quantum Secure Algorithms}
+Another approach would be to develop new algorithms using more complex trapdoor functions even quantum computers could not possibly crack in a feasible amount of time. 
+Researchers are working in areas like lattice-based cryptography, supersingular isogeny key exchange or hash-based cryptography. One of these approaches will be described in the following: 
+
+\begin{subsubsection}{Lattice-based Cryptography}
+Lattice-based Cryptography is a form of public-key cryptography that avoids the weaknesses of RSA and related security mechanisms. 
+Rather than multiplying primes, lattice-based encryption schemes involve multiplying matrices. 
+As Micciancio and Regev mention in their paper \cite{Micciancio2009}, 
+lattice-based cryptographic mechanisms are based on the presumed hardness of lattice problems and it is belived that lattice-based cryptography cannot be cracked by a quantum computer since the frequency finding technique,
+which is used in Shor's algorithm cannot be used in lattice-based problems. 
+\end{subsubsection}
+
+\end{subsection}
+
 
 \end{section}
 
 \begin{section}{Conclusion}
 As described before, Shor's algorithm, 
 as well as Grover's algorithm will presumably force computer scientists to improve current stadards to provide information security across areas. 
-To accomplish information security, 
-current security mechanisms such as hashing algorithms have to be improved and as a result be quantum-safe by increasing their key-length.
 The second approach mentioned in this paper is developing new, 
 quantum-secure algorithms, 
 like lattice-based cryptography. 
@@ -258,7 +263,7 @@ Josephson junctions are used in their superconducting quantum computer.
 If this approach will prevail is unclear, 
 since quantum entanglement in this type of processor is, as of 2021, not possible yet. 
 It has to be said that quantum computers, 
-as what could be seen in the current records revolving around quantum computing, 
+as what could be seen in current records,  
 are not powerful enough to form a thread to security mechanisms by now, 
 since way more qubits are needed to perform operations on large enough numbers and preserve the state of superposition long enough. 
 To conclude, it should be said that quantum computing should be seen as an opportunity for overdue improvement, not as a thread to digital security. 
