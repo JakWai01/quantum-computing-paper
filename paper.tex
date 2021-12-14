@@ -84,7 +84,7 @@ Some of those realizations, especially the ones important with regards to digita
 are summarized in the following:
 
 \begin{subsection}{Ion Traps}
-Vedral and Plenio describe the workings of the ion trap in their paper \cite{2008} as follows. 
+Vedral and Plenio describe the workings of the ion trap in their paper \cite[p.12-13]{2008} as follows. 
 They state that the ion trap quantum computer represents qubits in energy states and in vibrational modes between ions. 
 In a linear ion trap, currents in electrodes generate a time dependent electric field. 
 Ions then move through this potential and for some currents and ion masses, the ions get trapped in the field. 
@@ -96,10 +96,10 @@ In general, the ions are trapped at their position but they are in fact not rest
 The ions then get cooled by using laser cooling to reduce the movement of the ions in their current position. 
 This process is able to cool down the ions near 0 Kelvin. 
 At this point, the only movement left would be the movement caused by the quantum mechanical uncertainty priciple. 
-So far, it is not possible to cool a whole string of ions to near 0 K, 
+So far, it is not possible to cool a whole string of ions to near 0 Kelvin, 
 although several attempts cooling down a single ion and two ions succeeded. 
 
-As mentioned by Prashant in his paper \cite{prashant}, it has been possible to evaluate Fourier transforms using the ion trap quantum computer.
+As mentioned by Prashant in his paper \cite[p.20]{prashant}, it has been possible to evaluate Fourier transforms using the ion trap quantum computer.
 This achievment lead to Shor's factoring algorithm, 
 which is based on performing Fourier transforms.
 
@@ -110,7 +110,7 @@ In 2021, scientists from the University of Innsbruck presented a quantum compute
 \end{subsection}
 
 \begin{subsection}{Nuclear Magnetic Resonance}
-As explained in the article by Gershenfeld \cite{Gershenfeld1998QuantumCW}, a nuclear magnetic resonance (NMR) computer consists of a capsule filled with a liquid and an nuclear magnetic resonance spectrometer which is a machine used to analyze the molecular structure of a material by measuring the interaction of nuclear spins when placed in a strong magnetic field.
+As explained in the article by Gershenfeld \cite[p.66-71]{Gershenfeld1998QuantumCW}, a nuclear magnetic resonance (NMR) computer consists of a capsule filled with a liquid and an nuclear magnetic resonance spectrometer which is a machine used to analyze the molecular structure of a material by measuring the interaction of nuclear spins when placed in a strong magnetic field.
 Each molecule in the liquid represents an quantum memory register. 
 NMRs can compute by sending radio signals to the sample using the NMR machine and evaluating the response. 
 In an NMR quantum computer, qubits are represented as spin states of the atoms in the molecules. 
@@ -126,7 +126,7 @@ In SSNMRs, qubits can be measured individually, same as in the ion trap,
 instead of having to measure an ensemble of molecules as in LSNMR. 
 
 NMRs have been succesfully used in quantum computing, as they can solve non-polynomial problems in a polynomial time.
-According to Gershenfeld \cite{Gershenfeld1998QuantumCW}, the first successful computation on a NMR quantum computer was to execute a search using Grover's algorithm, 
+According to Gershenfeld \cite[p.69]{Gershenfeld1998QuantumCW}, the first successful computation on a NMR quantum computer was to execute a search using Grover's algorithm, 
 which will be covered in the respective chapter. 
 \end{subsection}
 
@@ -136,11 +136,11 @@ the Josephson effect is a phenomenon that occurs when two superconductors are se
 by some barrier or restriction between them, which is thin enough that electrons can tunnel through the barrier using quantum-mechanics. 
 This tunneling produces a current, known as supercurrent, that flows continuosly without any voltage applied. 
 This is used to create a non-linear inductance and design the qubits. 
-Wendin and Shumeiko mention \cite{shumeiko} many ways to realize qubits in Josephson junction based quantum computers. 
+Wendin and Shumeiko mention \cite[p.727]{shumeiko} many ways to realize qubits in Josephson junction based quantum computers. 
 The simplest of which is to realize qubits in Josepshon junctions by comparing energy levels of josepshon energy to the normal charging energy. 
 The josephson energy comes from kinetic energy of the tunneling electrons.
 
-Martinis and Osborne state \cite{martinis} that Josephson junction quantum computers are especially interesing because superconductor could provide long coherence times and because increasing the number of qubits should be straightforward. 
+Martinis and Osborne state \cite[p.3]{martinis} that Josephson junction quantum computers are especially interesting because superconductors could provide long coherence times and because increasing the number of qubits should be straightforward. 
 
 Qubits in Josephson junction quantum computers are controlled electrically which results in them being interesting for future developments.
 \end{subsection}
@@ -159,7 +159,7 @@ As of 2021, there are some challenges researcher in the current state of quantum
     One of those approaches is to use the "bit flip code" in which a total of 3 qubits are needed to result in 1 correct bit using quantum entanglement.  
     \item Increasing the number of qubits in a processor. The more qubits in a processor, the more logical qubits can be used. More qubits also lead to less errors since methods for error correction can be used more effectively.
     \item Decoherence leads to qubits retaining their quantum state only for a short period of time. 
-    According to Mavroeidis \cite{DBLP:journals/corr/abs-1804-00200} The longest time qubits remained in superposition so far was set by Australian researchers at the University of New South Wales. 
+    According to Mavroeidis \cite[p.3]{DBLP:journals/corr/abs-1804-00200} The longest time qubits remained in superposition so far was set by Australian researchers at the University of New South Wales. 
     Their qubits remained in superposition for a total of 35 seconds.
 \end{itemize}
 
@@ -181,9 +181,9 @@ Shor's algorithm is nearly exponentially faster than the general number field si
 The efficiency of the quantum Fourier transform which, as earlier discussed, can be caluclated using e.g. an ion trap quantum computer, is responsible for the efficiency of Shor's algorithm.
 The algorithm is generally capable to break current public-key cryptography mechanisms as RSA or the Diffie-Hellman key exchange if the quantum computer could operate with little noise. 
 That these algorithms could be vulnerable was already stated by Kirsch in 2015
-\cite{Kirsch2015QuantumCT}.
+\cite[p.6]{Kirsch2015QuantumCT}.
 
-Bone and Castro \cite{Bone} describe the workings of Shor's algorithm as follows. First, a memory register is placed into a superposition of all its possible states. Think of all possible permutations of $n$ bits existing in parallel.
+Bone and Castro \cite[p.6-9]{Bone} describe the workings of Shor's algorithm as follows. First, a memory register is placed into a superposition of all its possible states. Think of all possible permutations of $n$ bits existing in parallel.
 A calculation performed with Shor's algorithm can be thought of as computations done in parallel for every of the permutations generated before. 
 They then describe the mathematics performed on the registers: 
 \begin{itemize} 
@@ -213,7 +213,7 @@ Grover's algorithm is achieving the same goal in $O(\sqrt{N})$.
 In contrast to Shor's algorithm providing exponential speedup, 
 Grover's algorithm only provides quadratic speedup. 
 
-As \cite{DBLP:journals/corr/abs-1804-00200} state in their paper, Grover's algorithm can be utilized to find a collision in a hash function in $O(\sqrt{N})$ as searching for a collision is comparable to performing an unsorted search. 
+As Mavroeidis et al \cite[p.4]{DBLP:journals/corr/abs-1804-00200} state in their paper, Grover's algorithm can be utilized to find a collision in a hash function in $O(\sqrt{N})$ as searching for a collision is comparable to performing an unsorted search. 
 Additionally, Grover's algorithm can be used to improve a lot of brute-force attacks targeting symmetric cryptography.
 Brassard proved \cite{1998} that it is possible to combine Grover's algorithm with the birthday paradox, 
 also known as a quantum birthday attack, which leads to finding collisions with a complexity of $O(N^{\frac{1}{3}})$.
@@ -239,7 +239,7 @@ Researchers are working in areas like lattice-based cryptography, supersingular 
 \begin{subsubsection}{Lattice-based Cryptography}
 Lattice-based Cryptography is a form of public-key cryptography that avoids the weaknesses of RSA and related security mechanisms. 
 Rather than multiplying primes, lattice-based encryption schemes involve multiplying matrices. 
-As Micciancio and Regev mention in their paper \cite{Micciancio2009}, 
+As Micciancio and Regev mention in their paper \cite[p.2]{Micciancio2009}, 
 lattice-based cryptographic mechanisms are based on the presumed hardness of lattice problems and it is belived that lattice-based cryptography cannot be cracked by a quantum computer since the frequency finding technique,
 which is used in Shor's algorithm cannot be used in lattice-based problems. 
 \end{subsubsection}
