@@ -30,15 +30,15 @@ Hence it is important to look at the implications on digital security, especiall
 
 \begin{section}{Related Work}
 Prashant writes about the limitations of classical computers and how quantum computers can be realized \cite{prashant}. 
-Their brief explanations on different realizations of quantum computers is introducing the reader to several related research areas on a high level. 
+Their explanations on different realizations of quantum computers are introducing the reader to several related research areas on a high level. 
 
-Providing detailed examples of the workings of Shor's and Grover's algorithm are Bone and Castro in their overview of quantum computing \cite{Bone}. 
+Providing examples of the workings of Shor's and Grover's algorithm are Bone and Castro in their overview of quantum computing \cite{Bone}. 
 
-Vedral and Planio provide an especially interesting and detailed explanation of ion trap quantum computers in their paper \cite{2008}.
+Vedral and Planio provide a detailed explanation of ion trap quantum computers in their paper about the fundamentals of quantum computing \cite{2008}.
 
 Martinis and Osborne write about josepshon junctions \cite{martinis} and how the josephson effect can be used to create a quantum computer utilizing superconductors.
 
-Diving a little bit deeper, Mavroeidis et al. introduce the reader to present cryptography algorithms, how they are vulnerable to quantum computers and their main topic, post quantum security \cite{DBLP:journals/corr/abs-1804-00200}. 
+Mavroeidis et al. introduce the reader to present cryptography algorithms, how they are vulnerable to quantum computers and their main topic, post quantum security \cite{DBLP:journals/corr/abs-1804-00200}. 
 
 The largest number factorized on a quantum computer so far using Shor's algorithm was the number 21. Martìn-Lòpez et al. write about how they achieved this breakthrough in their paper \cite{article}.
 
@@ -48,9 +48,9 @@ Micciancio and Regev introduce the topic of lattice-based cryptography \cite{Mic
 
 \begin{section}{Quantum Computers}
 Quantum computers utilize qubits to represent information. 
-Instead of working with a stream of electrical or optical signals representing 1s and 0s, 
+Instead of working with classical bits representing 1s and 0s, 
 quantum computers utilize qubits, which can represent various combinations of 1s and 0s at the same time. 
-This effect is called superposition. To put qubits into superposition, 
+This effect of qubits representing multiple states at the same time is called superposition. To put qubits into superposition, 
 researchers manipulate qubits in different ways. As quantum computing is based on quantum mechanics and hence has to obey to the same laws, 
 a measurement determines the state of a qubit. Once qubits are measured, 
 its quantum state immediately collapses to either 1 or 0 and its state of superposition is lost.
@@ -91,7 +91,7 @@ This results out of the fact that research results in new algorihtms and hardwar
 Potential applications for quantum computers exceed cryptography. Some potential applications include the simulation of quantum systems, machine learning, computational biology and generative chemistry. 
 \end{section}
 
-\begin{section}{Experimental Realizations of Quantum Computers}
+\begin{section}{Realizations of Quantum Computers}
 
 There are different approaches on how to realize machines utilizing quantum effects for computing known as quantum computers.
 Those different approaches have different advantantages and challenges. 
@@ -132,10 +132,10 @@ a measurement is performed on a statistical ensemble of molecules instead of a s
 Initially, as mentioned above, the NMRs used atoms in a liquid sample as qubits which is known as liquid state NMR (LSNMR). 
 Since solid state NMRs (SSNMR) emerged, SSNMR is usually preferred in terms of performing quantum computation.
 
-Solid state NMRs differ from LSNMRs in that SSSNMRs provide a solid state sample.
-This has many advantages such as lack of molecular diffusion coherence and lower temperatures, as well as the more precise localization of qubits using crystal structures.
+Solid state NMRs differ from LSNMRs in that SSSNMRs provide a sample in solid state.
+This has many advantages such as being able to work using lower temperatures as well as the more precise localization of qubits using crystal structures.
 In SSNMRs, qubits can be measured individually, same as in the ion trap,
-instead of having to measure an ensemble of molecules as in LSNMR. 
+instead of having to measure an ensemble of molecules as in LSNMRs. 
 
 NMRs have been succesfully used in quantum computing, as they can solve non-polynomial problems in a polynomial time.
 According to Gershenfeld \cite[p.69]{Gershenfeld1998QuantumCW}, the first successful computation on a NMR quantum computer was to execute a search using Grover's algorithm, 
@@ -146,7 +146,7 @@ which will be covered in the respective chapter.
 As Martinis and Osborne explain in their paper \cite[p.3-6]{martinis}, 
 the Josephson effect is a phenomenon that occurs when two superconductors are seperated 
 by some barrier or restriction between them, which is thin enough that electrons can tunnel through the barrier using quantum-mechanics. 
-This tunneling produces a current, known as supercurrent, that flows continuosly without any voltage applied. 
+This tunneling produces a current, known as supercurrent, that flows continuosly without any voltage applied.
 Said current is used to create a non-linear inductance. 
 Wendin and Shumeiko mention \cite[p.727]{shumeiko} many ways to realize qubits in Josephson junction based quantum computers. 
 The simplest of which is to realize qubits in Josepshon junctions by comparing energy levels of josepshon energy to the normal charging energy. 
@@ -161,13 +161,13 @@ Qubits in Josephson junction quantum computers are controlled electrically which
 As of 2021, there are some challenges researchers face in the current state of quantum computing which can be derived from the earlier chapters: 
 
 \begin{itemize}
-    \item Often, as e.g. in the Josephson junction quantum computer, extremely low temperatures are needed. These have to be achieved at a reasonable cost. Using e.g. laser cooling is one approach in quantum computing. The concept of laser cooling was proposed by Steven Chu, Claude-Cohen-Tannoudji and William D. Phillips who got awarded the Nobel prize for their research in the develoment of methods to cool and trap atoms with laser light.
+    \item Often, as e.g. in the Josephson junction quantum computer, extremely low temperatures are required. These have to be achieved at a reasonable cost. Using e.g. laser cooling is one approach in quantum computing. The concept of laser cooling was proposed by Steven Chu, Claude-Cohen-Tannoudji and William D. Phillips who got awarded the Nobel prize for their research in the develoment of methods to cool and trap atoms with laser light.
     \item Quantum algorithms have probabilistic characteristics. 
     This implies that in a single operation a quantum computer returns multiple solutions, each of those solutions with an assigned probability, where only one can be correct. 
     Figuring out the correct answer reduces the potential speed of quantum computers.
     \item Qubits are prone to errors earlier introduced as noise. 
     Noise can be caused e.g. by heat or noise in the environment. 
-    As in classical computing, noise can lead to bit-flips. There are approached in "quantum error correction" to deal with these errors. 
+    As in classical computing, noise can lead to bit-flips. There are approaches in "quantum error correction" to deal with these errors. 
     One of those approaches is to use the "bit flip code" in which a total of 3 qubits are needed to result in 1 correct bit using quantum entanglement.  
     \item Increasing the number of qubits in a processor is fundamental. The more qubits in a processor, the more logical qubits can be used. More qubits also lead to less errors since methods for error correction can be used more effectively.
     \item Decoherence leads to qubits retaining their quantum state only for a short period of time. 
@@ -235,7 +235,6 @@ However, as of 2021, both SHA-2 and SHA-3 with longer outputs remain quantum res
 
 \end{section}
 
-% Research for this paragraph and add some more post quantum crypto examples
 \begin{section}{Post Quantum Cryptography}
 Post Quantum Cryptography describes algorithms that are secure against quantum computing and conventional computers. To make sure that an algorithm is quantum secure, there are generally two approaches: 
 \begin{subsection}{Improve Current Security Mechanisms}    
