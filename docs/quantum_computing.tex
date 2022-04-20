@@ -1,6 +1,7 @@
 \documentclass[aps,preprintnumbers,twocolumn]{revtex4}
 \usepackage{natbib}
 \usepackage{url}
+\usepackage{filecontents}
 
 \begin{document}
 \title{Quantum Computing and its Implications on Digital Security}
@@ -280,6 +281,154 @@ To conclude, it should be said that quantum computing should be seen as an oppor
 
 \bibliographystyle{plain}
 \bibliography{citations}
+
+\begin{filecontents}{citations.bib}
+@internet{IEEE,
+  author = {IEEE Spectrum},
+  title = {How Many Qubits Are Needed for Quantum Supremacy?},
+  year = 2020,
+  howpublished = {\url{https://spectrum.ieee.org/qubit-supremacy}},
+  urldate = {2022-01-05}
+}
+
+@internet{AIMultiple,
+  author = {AIMultiple},
+  title = {Quantum Entanglement: What it is \& Why it is important},
+  year = 2021,
+  howpublished = {\url{https://research.aimultiple.com/quantum-computing-entanglement/}},
+  urldate = {2022-01-05}
+}
+
+@internet{MIT,
+  author = {MIT Technology Review},
+  title = {This new startup has built a record-breaking 256-qubit quantum computer},
+  year = 2021,
+  howpublished = {\url{https://www.technologyreview.com/2021/11/17/1040243/quantum-computer-256-bit-startup/}},
+  urldate = {2022-01-05}
+}
+
+@article{DBLP:journals/corr/abs-1804-00200,
+  author    = {Mavroeidis and
+               Vishi and
+               Zych and
+               J{\o}sang},
+  title     = {The Impact of Quantum Computing on Present Cryptography},
+  journal   = {CoRR},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1804.00200},
+  eprinttype = {arXiv},
+  eprint    = {1804.00200},
+  timestamp = {Mon, 13 Aug 2018 16:46:41 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1804-00200.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{Kirsch2015QuantumCT,
+  title={Quantum Computing: The Risk to Existing Encryption Methods},
+  author={Kirsch and Chow},
+  year={2015}
+}
+
+@article{article,
+author = {Martín-López and Laing and Lawson and Alvarez and Zhou and O'Brien},
+year = {2011},
+pages = {},
+title = {Experimental realisation of Shor's quantum factoring algorithm using
+qubit recycling},
+journal = {Nature Photonics},
+doi = {10.1038/nphoton.2012.259}
+}
+
+@article{1998,
+   title={Quantum cryptanalysis of hash and claw-free functions},
+   ISSN={1611-3349},
+   url={http://dx.doi.org/10.1007/BFb0054319},
+   DOI={10.1007/bfb0054319},
+   journal={Lecture Notes in Computer Science},
+   publisher={Springer Berlin Heidelberg},
+   author={Brassard and HØyer and Tapp},
+   year={1998},
+   pages={163–169}
+}
+
+@article{2008,
+   title={Basics of quantum computation},
+   volume={22},
+   ISSN={0079-6727},
+   url={http://dx.doi.org/10.1016/S0079-6727(98)00004-4},
+   DOI={10.1016/s0079-6727(98)00004-4},
+   number={1},
+   journal={Progress in Quantum Electronics},
+   publisher={Elsevier BV},
+   author={Vedral and Plenio},
+   year={2008},
+   month={Jan},
+   pages={1–39}
+}
+
+@article{prashant,
+author = {Prashant},
+year = {2005},
+journal = {},
+pages = {},
+title = {A Study on the basics of Quantum Computing}
+}
+
+@article{Gershenfeld1998QuantumCW,
+  title={Quantum Computing with Molecules},
+  author={Gershenfeld and Chuang},
+  journal={Scientific American},
+  year={1998},
+  volume={278},
+  pages={66-71}
+}
+
+@article{shumeiko,
+author = {Wendin and Shumeiko},
+year = {2007},
+pages = {957-981},
+title = {Quantum bits with Josephson junctions},
+journal = {Fizika Nizkikh Temperatur (Kharkov)}
+}
+
+@article{martinis,
+author = {Martinis and Osborne},
+year = {2004},
+title = {Superconducting Qubits and the Physics of Josephson Junctions},
+journal = {}
+}
+
+@article{Bone,
+author = {Bone and Castro},
+year = {2017},
+title = {A Brief History of Quantum Computing}, 
+journal = {}
+}
+
+@article{Micciancio2009,
+author="Micciancio
+and Regev",
+title="Lattice-based Cryptography",
+year="2009",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+isbn="978-3-540-88702-7",
+doi="10.1007/978-3-540-88702-7_5",
+url="https://doi.org/10.1007/978-3-540-88702-7_5"
+}
+
+@article{friis,
+  title = {Observation of Entangled States of a Fully Controlled 20-Qubit System},
+  author = {Friis, Nicolai and Marty, Oliver and Maier, Christine and Hempel, Cornelius and Holz\"apfel, Milan and Jurcevic, Petar and Plenio, Martin B. and Huber, Marcus and Roos, Christian and Blatt, Rainer and Lanyon, Ben},
+  journal = {Phys. Rev. X},
+  issue = {2},
+  numpages = {20},
+  year = {2018},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevX.8.021012},
+  url = {https://link.aps.org/doi/10.1103/PhysRevX.8.021012}
+}
+\end{filecontents}
 
 \end{document}
 
