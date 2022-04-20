@@ -15,4 +15,4 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: .
           files: |
-            paper.tex
+            quantum_computing.tex
