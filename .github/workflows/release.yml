@@ -10,3 +10,10 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: paper.tex
+      - name: Commit and push files
+        run: |
+          git config --global user.name JakWai01
+          git config --global user.email jakob.waibel@web.de
+          git add .
+          git commit -m "release: PDF"
+          git push origin gh-pages
